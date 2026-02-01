@@ -81,13 +81,13 @@ export function Home() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary-50 to-white dark:from-gray-800 dark:to-gray-900 py-16 md:py-24">
+      <section className="bg-gradient-to-b from-primary-50 to-white dark:from-gray-900 dark:to-gray-950 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Free PDF & Image Converter
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
               Convert images to PDF and PDF to images instantly. 100% free, no sign-up required,
               and your files never leave your browser.
             </p>
@@ -99,16 +99,16 @@ export function Home() {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-8">
             {converters.map((converter) => (
               <Link key={converter.path} to={converter.path}>
-                <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer group">
+                <Card className="h-full hover:shadow-lg dark:hover:shadow-primary-500/10 transition-shadow cursor-pointer group">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-100 dark:bg-primary-900/50 text-primary-600 rounded-lg group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                    <div className="p-3 bg-primary-100 dark:bg-primary-500/20 text-primary-600 dark:text-primary-400 rounded-lg group-hover:bg-primary-600 group-hover:text-white dark:group-hover:bg-primary-500 transition-colors">
                       {converter.icon}
                     </div>
                     <div>
                       <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                         {converter.title}
                       </h2>
-                      <p className="text-gray-600 dark:text-gray-300">{converter.description}</p>
+                      <p className="text-gray-600 dark:text-gray-400">{converter.description}</p>
                     </div>
                   </div>
                 </Card>
@@ -119,7 +119,7 @@ export function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white dark:bg-gray-800">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
             Why Choose PDF Kit?
@@ -127,13 +127,13 @@ export function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature) => (
               <div key={feature.title} className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-primary-900/50 text-primary-600 rounded-lg mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-primary-500/20 text-primary-600 dark:text-primary-400 rounded-lg mb-4">
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
+                <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -143,7 +143,7 @@ export function Home() {
       <AdBanner position="bottom" />
 
       {/* Quick Links */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+      <section className="py-16 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-8">
             Popular Conversions
@@ -158,7 +158,7 @@ export function Home() {
               <Link
                 key={link.path}
                 to={link.path}
-                className="px-6 py-3 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-primary-500 hover:text-primary-600 transition-colors"
+                className="px-6 py-3 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 hover:border-primary-500 dark:hover:border-primary-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
               >
                 {link.label}
               </Link>
